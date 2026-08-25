@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruhiiiiiii 💗 | Beauty & Friendship</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", Arial, sans-serif;
+}
+
+body{
+    background:#fff7fb;
+    color:#3d2734;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#d94f91;
+}
+
+nav a{
+    text-decoration:none;
+    color:#4b3542;
+    margin-left:25px;
+    font-size:14px;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 60px;
+    background:
+      radial-gradient(circle at 20% 20%,#ffd9ea,transparent 30%),
+      radial-gradient(circle at 80% 80%,#eadcff,transparent 30%),
+      #fff7fb;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ffe1ee;
+    color:#c23d7b;
+    padding:9px 20px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:70px;
+    color:#d33f83;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    font-size:25px;
+    font-weight:400;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:600px;
+    margin:auto;
+    line-height:1.8;
+    color:#765d6b;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:linear-gradient(135deg,#e85c9c,#b978e0);
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(216,78,143,.25);
+}
+
+/* SECTION */
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    color:#d33f83;
+    font-size:38px;
+}
+
+.section-title p{
+    color:#876b79;
+    margin-top:8px;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 35px rgba(130,70,100,.1);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+}
+
+.product-icon{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:50px;
+    background:linear-gradient(135deg,#ffd7e8,#e9d8ff);
+    margin-bottom:20px;
+}
+
+.product h3{
+    color:#c83d7e;
+    margin-bottom:10px;
+}
+
+.product p{
+    color:#7d6872;
+    line-height:1.6;
+}
+
+/* FRIENDSHIP CARD */
+.friendship{
+    background:linear-gradient(135deg,#ffe4ef,#eee2ff);
+    border-radius:35px;
+    padding:60px 30px;
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.friendship h2{
+    font-size:42px;
+    color:#c9367c;
+}
+
+.friendship p{
+    max-width:650px;
+    margin:20px auto;
+    line-height:1.9;
+    color:#624c59;
+}
+
+/* BEAUTY ROUTINE */
+.routine{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(100,60,80,.08);
+}
+
+.step span{
+    display:block;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.step h3{
+    color:#cc427f;
+}
+
+/* QUOTE */
+.quote{
+    text-align:center;
+    padding:80px 20px;
+    background:#3f2938;
+    color:white;
+}
+
+.quote h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.quote p{
+    font-size:18px;
+    color:#f8dce9;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#291d25;
+    color:#d9c4ce;
+}
+
+footer span{
+    color:#ff76ae;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+    .hero h1{
+        font-size:50px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .routine{
+        grid-template-columns:1fr 1fr;
+    }
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav a{
+        margin-left:10px;
+    }
+}
+
+@media(max-width:500px){
+    .routine{
+        grid-template-columns:1fr;
+    }
+
+    nav .links{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Ruhiiiiiii ✨</div>
+
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#beauty">Beauty</a>
+        <a href="#friendship">Friendship</a>
+        <a href="#routine">Glow Up</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <div class="badge">✨ A Special Beauty Collection</div>
+
+        <h1>Ruhiiiiiii 💗</h1>
+
+        <h2>Beauty, Glow & A Little Bit of Friendship</h2>
+
+        <p>
+            Some people are like your favourite beauty product —
+            they simply make everything a little brighter.
+            And this little website is dedicated to one special friend.
+        </p>
+
+        <a href="#friendship" class="btn">
+            Open Your Surprise 💕
+        </a>
+
+    </div>
+</section>
+
+
+<!-- BEAUTY PRODUCTS -->
+<section id="beauty">
+
+    <div class="section-title">
+        <h2>Ruhiiiiiii's Beauty Collection 💄</h2>
+        <p>Every product has a friendship meaning.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="product-icon">🌸</div>
+            <h3>Blush of Happiness</h3>
+            <p>
+                A little happiness can completely change the mood.
+                Just like a good friend can.
+            </p>
+        </div>
+
+        <div class="product">
+            <div class="product-icon">💄</div>
+            <h3>Friendship Lip Gloss</h3>
+            <p>
+                For all those random conversations,
+                jokes and endless talking sessions.
+            </p>
+        </div>
+
+        <div class="product">
+            <div class="product-icon">✨</div>
+            <h3>Glow Serum</h3>
+            <p>
+                Because some friendships naturally bring
+                positive energy and good vibes.
+            </p>
+        </div>
+
+        <div class="product">
+            <div class="product-icon">🧴</div>
+            <h3>Care Cream</h3>
+            <p>
+                Friendship is about caring,
+                supporting and being there when needed.
+            </p>
+        </div>
+
+        <div class="product">
+            <div class="product-icon">🌷</div>
+            <h3>Rose Mist</h3>
+            <p>
+                A reminder that even ordinary days
+                can have beautiful little moments.
+            </p>
+        </div>
+
+        <div class="product">
+            <div class="product-icon">💎</div>
+            <h3>Rare Gem</h3>
+            <p>
+                Some people are rare.
+                Good friends are even rarer.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FRIENDSHIP -->
+<section id="friendship">
+
+    <div class="friendship">
+
+        <h2>Dear Ruhiiiiiii 💕</h2>
+
+        <p>
+            This isn't really a beauty website.
+            It's actually a tiny friendship gift disguised as one. 😌
+        </p>
+
+        <p>
+            Life has thousands of people,
+            but only a few become genuinely special.
+            So here's a little reminder:
+            you're an important part of some really good memories.
+        </p>
+
+        <p>
+            Keep smiling, keep glowing,
+            and never forget how much your friendship is appreciated. 🌷
+        </p>
+
+        <a href="#routine" class="btn">
+            Continue ✨
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- GLOW UP ROUTINE -->
+<section id="routine">
+
+    <div class="section-title">
+        <h2>The Ruhiiiiiii Glow-Up Routine ✨</h2>
+        <p>Four essential ingredients for a beautiful life.</p>
+    </div>
+
+    <div class="routine">
+
+        <div class="step">
+            <span>😊</span>
+            <h3>Smile</h3>
+            <p>Never underestimate the power of a genuine smile.</p>
+        </div>
+
+        <div class="step">
+            <span>💗</span>
+            <h3>Kindness</h3>
+            <p>Good hearts never go out of style.</p>
+        </div>
+
+        <div class="step">
+            <span>✨</span>
+            <h3>Confidence</h3>
+            <p>Be yourself and let your personality shine.</p>
+        </div>
+
+        <div class="step">
+            <span>👯</span>
+            <h3>Friendship</h3>
+            <p>Keep the people who make life more fun.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUOTE -->
+<div class="quote">
+
+    <h2>Beauty fades, but good friendship stays. 💗</h2>
+
+    <p>
+        Made specially for Ruhiiiiiii ✨
+    </p>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+    Made with 💗 for <span>Ruhiiiiiii</span>
+    <br>
+    © 2026 Friendship Beauty Collection
+</footer>
+
+
+<script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function(e){
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute("href"))
+                .scrollIntoView({
+                    behavior:"smooth"
+                });
+        });
+    });
+</script>
+
+</body>
+</html>
